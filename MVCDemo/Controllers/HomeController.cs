@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCDemo.Filters;
 using MVCDemo.Models;
 using System.Diagnostics;
 
@@ -22,6 +23,7 @@ namespace MVCDemo.Controllers
             ViewBag.contact = contact;
             return View();
         }
+        [MyLog]
         public IActionResult Index()
         {
             return View();
